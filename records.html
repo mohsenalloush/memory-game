@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Records</title>
+    <link rel="stylesheet" href="navstyle.css">
+    <link rel="stylesheet" href="records.css">
+</head>
+<body>
+
+ <header>
+    <h2 class="Logo">Remember the fucking numbers</h2>
+
+ <nav>
+    <ul class="NavLinks">
+        <li><a href="C:\Users\Acer\Desktop\Guess the number\about\about.html">About</a></li>
+        <li><a href="index2.html">Players record</a></li>
+        <li><a href="C:\Users\Acer\Desktop\Guess the number\index.html">Home</a></li>
+    </ul>
+ </nav>
+
+    <a href="#"><button>?</button></a>
+  </header>
+
+  <div class="recordsbox">
+    <h1 class="header">Player Records</h1>
+    <table class="table" border="3">
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Correct Answers</th>
+                <th>Wrong Answers</th>
+                <th>Attempts</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="recordTableBody">
+        </tbody>
+    </table>
+    <button class="back2game" onclick="window.location.href='index.html'">Back to Game</button>
+  </div>
+
+    <script>
+        // Retrieve records from local storage and display them
+        const records = JSON.parse(localStorage.getItem('gameRecords')) || [];
+        const recordTableBody = document.getElementById('recordTableBody');
+        
+        records.forEach(record => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${record.player}</td>
+                <td>${record.correct}</td>
+                <td>${record.wrong}</td>
+                <td>${record.attemptsUsed}</td>
+                <td>${record.date}</td>
+            `;
+            recordTableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

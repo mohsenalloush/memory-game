@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="C:\Users\Acer\Desktop\Guess the number\navstyle.css">
+    <link rel="stylesheet" href="gamebox.css">
+</head>
+<body>
+  <header>
+    <h2 class="Logo">Remember the fucking numbers</h2>
+
+<nav>
+    <ul class="NavLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="records.html">Players record</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+</nav>
+<a href="#"><button>?</button></a>
+  </header>
+ <div class="gamebox">
+
+  <h1 class="item-1">Memory Game</h1>
+  <p class="item-2" id="level">Level: 1</p>
+  <p class="item-3" id="number"></p>
+  <p class="item-4" id="feedback"></p>
+  <input class="item-5" type="text" id="input" autocomplete="off" />
+  <button class="item-6" id="submit">Submit</button>
+  <p class="item-7" >Correct: <span id="correct">0</span></p>
+  <p class="item-8" >Wrong: <span id="wrong">0</span></p>
+  <p class="item-9" >Attempts: <span id="attempts">20</span></p>
+  <button class="item-10" id="button">record</button>
+</div>
+
+<audio id="correctSound" src="correcrt.mp3" preload="auto"></audio>
+<audio id="incorrectSound" src="incorrect.mp3" preload="auto"></audio>
+<audio id="winningSound" src="winning.mp3" preload="auto"></audio>
+<audio id="losingSound" src="losing.mp3" preload="auto"></audio>
+
+<script src="jja"></script>
+    <script src="game.js"></script>
+</body>
+</html>

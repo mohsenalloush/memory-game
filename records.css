@@ -1,0 +1,25 @@
+.recordsbox {
+    background-color: rgba(red, rgb(0, 110, 255), blue, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    margin: 10% 10%;
+    color: aliceblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.header {
+    padding: 0 0 20px 0;
+}
+.table {
+    width: 95%;
+    font-size: 1.3em;
+   
+}
+.back2game {
+   margin: 20px 0 0 0;
+}
